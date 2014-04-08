@@ -1,0 +1,26 @@
+<h1>Listing links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Title</th>
+      <th>URL</th>
+      <th>Description</th>
+      <th>Posted</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @links.each do |link| %>
+      <tr>
+        <td><%= link.net_rating %></td>
+        <td><%= link.title %></td>
+        <td><%= link_to link.url, link.url %></td>
+        <td><%= link.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
