@@ -5,7 +5,8 @@ class CreateLinks < ActiveRecord::Migration
       t.string :description
       t.string :title
       t.integer :net_rating
-      t.datetime 
+      t.datetime
+      t.belongs_to :user
     end
   end
 end

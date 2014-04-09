@@ -1,5 +1,7 @@
 Redt::Application.routes.draw do
 
+  get '/', to: 'links#index'
+
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'

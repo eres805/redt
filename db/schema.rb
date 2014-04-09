@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140408212209) do
     t.string  "description"
     t.string  "title"
     t.integer "net_rating"
+    t.integer "user_id"
   end
 
   create_table "users", force: true do |t|
