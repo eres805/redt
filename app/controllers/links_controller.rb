@@ -1,5 +1,7 @@
 class LinksController < ApplicationController
 
+before_action :require_authentication, only: [:new, :edit, :update, :destroy] 
+
 	def index
 		@links = Link.all
 	end
@@ -14,6 +16,7 @@ class LinksController < ApplicationController
 
 	def create
 		@link = Link.new(link_params)
+		@link.user_id = current_user.id
 		@link.save
 		redirect_to links_path
 	end

@@ -17,11 +17,13 @@ ActiveRecord::Schema.define(version: 20140408212209) do
   enable_extension "plpgsql"
 
   create_table "links", force: true do |t|
-    t.string  "url"
-    t.string  "description"
-    t.string  "title"
-    t.integer "net_rating"
-    t.integer "user_id"
+    t.string   "url"
+    t.string   "description"
+    t.string   "title"
+    t.integer  "net_rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

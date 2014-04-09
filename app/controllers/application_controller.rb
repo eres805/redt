@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_authentication
+    redirect_to login_path unless current_user
+  end
+
 end

@@ -7,6 +7,7 @@
       <th>Title</th>
       <th>URL</th>
       <th>Description</th>
+      <th>User ID </th>
       <th>Posted</th>
     </tr>
   </thead>
@@ -18,9 +19,13 @@
         <td><%= link.title %></td>
         <td><%= link_to link.url, link.url %></td>
         <td><%= link.description %></td>
+        <td><%= link_to link.user.name, user_path(link.user) %></td>
+        <td><%= link.created_at %></td>
+
+    
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<%= link_to "Add new link", new_link_path %>
 <br>

@@ -8,6 +8,16 @@
   <%= @user.email %>
 </p>
 
+<h1>Links user has posted</h1>
+<% @links.each do |link| %>
+      <tr>
+        <td><%= link.net_rating %></td>
+        <td><%= link.title %></td>
+        <td><%= link_to link.url, link.url %></td>
+        <td><%= link.description %></td>
+      </tr>
+<% end %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 

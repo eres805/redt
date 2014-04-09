@@ -1,5 +1,7 @@
 Redt::Application.routes.draw do
 
+  root to: 'links#index'
+  
   get '/', to: 'links#index'
 
   get '/login', to: 'sessions#new'

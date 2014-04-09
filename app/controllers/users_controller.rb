@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
 
-  # before_action :require_authentication, only: [:edit, :update, :destroy]
+  before_action :require_authentication, only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
+
   end
 
   def show
     @user = User.find(params[:id])
+    @links = Link.where(:user_id => params[:id])
   end
 
   def new
